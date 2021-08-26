@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        body{
+            margin: 0px;
+            background-color: lightblue;
+            font-family: sans-serif;
+            color: white;
+        }
+        #container{
+            height: 700px;
+            width: 400px;
+            box-sizing: border-box;
+            margin:5% auto;
+            box-shadow: 5px 5px 10px 2px grey;
+        }
+
+        #top{
+            background-color: black;
+            height: 200px;
+            width: 400px;
+            box-sizing: border-box;
+            opacity: 0.5;
+            position: absolute;
+            z-index: -1;
+        }
+
+        #show_result{
+            margin: 0px;
+            height: 200px;
+            width: 400px;
+            border: 1px solid red;
+            box-sizing: border-box;
+            background:transparent;
+            z-index: 1;
+            text-align: right;
+        }
+        #show_result #up{
+            height: 30%;
+            width: 100%;
+            min-height: 30%;
+            min-width: 100%;
+            box-sizing: border-box;
+            background:transparent;
+            color: white;
+            font-size: 2em;
+            text-align: right;
+            transition: all 0.2s;
+            outline: none;
+            border: none;
+        }
+        #show_result #down{
+            height: 70%;
+            width: 100%;
+            min-height: 70%;
+            min-width: 100%;
+            box-sizing: border-box;
+            background:transparent;
+            color: white;
+            font-size: 4em;
+            text-align: right;
+            outline: none;
+            border: none;
+        }
+
+
+        #btn_container{
+            height: 500px;
+            width: 400px;
+            display:flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        .btn{
+            display: block;
+            /* border: 1px solid white; */
+            height: 100px;
+            width: 100px;
+            box-sizing: border-box;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #707070;
+            background-color: #DDAF94;
+            transition: all 0.1s;
+
+        }
+        .btn:nth-child(4n){
+            background-color:lightgreen ;
+            color: white;
+        }
+        .btn:nth-child(1),.btn:nth-child(2),.btn:nth-child(3){
+            background-color:#DE354C ;
+            color: white;
+        }
+        .btn:hover{
+            background-color: seagreen;
+            color:white;
+            font-size: 1.9em;
+        }
+        /* .btn:active{
+            font-size: 2.5em;
+        } */
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="top"></div>
+        <div id="show_result">
+            <textarea id="up" ></textarea>
+            <textarea id="down" ></textarea>
+        </div>
+        <div id="btn_container">
+            <button class="btn" onclick="clears()">C</button>
+            <button class="btn" onclick="backspace()">↩</button>
+            <button class="btn num" >%</button>
+            <button class="btn num" >÷</button>
+            <button class="btn num" >7</button>
+            <button class="btn num" >8</button>
+            <button class="btn num" >9</button>
+            <button class="btn num" >×</button>
+            <button class="btn num" >4</button>
+            <button class="btn num" >5</button>
+            <button class="btn num" >6</button>
+            <button class="btn num" >–</button>
+            <button class="btn num" >1</button>
+            <button class="btn num" >2</button>
+            <button class="btn num" >3</button>
+            <button class="btn num" >+</button>
+            <button class="btn" onclick="pie()">π</button>
+            <button class="btn num" >0</button>
+            <button class="btn num" >.</button>
+            <button class="btn" onclick="equate()">=</button>
+        </div>
+    </div>
+    <script>
+        $('.num').click(function(){
+
+            $('#down').append($(this).text());
+
+        });
+
+        function backspace(){
+            $('#down').text($('#down').text().slice(0,-1))
+        }
+
+        function clears(){
+            $('#down').text("")
+        }
+
+        function equate(){
+            $('#up').text($('#down').text())
+            //console.log(eval($('#down').text()))
+            var tex = $('#down').text().split("")
+            var res="";
+            tex.forEach(element => {
+                if(element == '×'){
+                    res+='*';
+                }
+                else if(element == '÷'){
+                    res+='/'
+                }
+                else if(element == '–'){
+                    res+='-';
+                }
+                else{
+                    res+=element;
+                }
+            });
+            
+            $('#down').text(eval(res));
+
+            
+        }
+    </script>
+</body>
+</html>

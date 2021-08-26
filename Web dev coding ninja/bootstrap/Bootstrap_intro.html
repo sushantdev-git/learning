@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<!--
+    Frontend framework is used to complete our work in less time
+    frontend framework provide loads and loads of feature
+    some popular frameworks are:-
+        1.Bootstrap
+        2.Matrialize css
+        3.semantic css
+
+    We will be doing Bootstrap
+        Pros:-
+        -----
+        Popular
+        save lot of development time
+        have lots of style
+        It's responsive
+        It's customizable
+        It have great support 
+
+        Cons:-
+        -----
+        Bulky- lot of feature that are not usable
+        Desing might look similar to someone's website
+        It have grid system
+        completely dependent on framework and not flexibility in project
+
+    How to add Bootstrap to project:-
+        Offline:- Download bootstrap css.min file and link to your html
+        Online:- link css.min file form it's website(bootstrap)
+    
+    Bootstrap brekpoint
+        The place where change in design take place is known as breakpoint.
+        Bootstrap is used to desing pages for mobile first appraoch
+        so, by default sizing will be according to xs
+        These are 5 different breakpoint 
+        1> xs  - <576px
+        2> sm  - <768px
+        3> md  - <992px
+        4> lg  - <999px onwards
+        5> xl  - 1200px onwards
+
+    #Grid system
+        In gird system there is:-
+        1.Container 
+        2.Container contain rows
+        3.rows contain columns 
+            A row can contain 12 columns, in grid system a row can have maximun of 12 column every column have size of 1
+            You can do resizing of column , by defalult col have size 12 and its get devided as col icrease
+
+        You can use two classes for container
+            .container - for using reponsive fixed width container
+            .container-fluid - for using full width continer , spannig entire width of viewport.
+        
+        You can control col spanning using class:
+            'col-1' to 'col-12' where no representing the size of spanning
+
+        You can use breakpoint using breakpoint class:
+            EX- col-sm-2 -- col width on small screen will be 2
+                col-lg-4 -- col width on large screen will be 4
+
+        You can set display property of any div using class:
+            d-screensize-block
+            
+        You can apply margin using class:
+            mt-2 
+            m for margin
+            t for top
+
+    
+
+-->
+<body>
+    <h1>Hello World!</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 d-md-none d-lg-block" style="background-color:red;">Paaa</div>
+            <div class="col-12 col-sm-6 col-lg-12" style="background-color:green">Paaa</div>
+            <div class="col-12 col-sm-6 mt-2" style="background-color: lightgoldenrodyellow;">paa</div>
+        
+        <!-- <div class="row">
+            <div class="col-4" style="background-color:red; height: 60px;">Paaa</div>
+            <div class="col-4" style="background-color:green">Paaa</div>
+            <div class="col-4" style="background-color:blue">Paaa</div>
+        </div> -->
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown button
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

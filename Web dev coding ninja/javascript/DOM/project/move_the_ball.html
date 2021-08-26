@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Sushant Kumar-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        #container{
+            height: 100vh;
+            width: 100vw;
+
+            max-height: 100vh;
+            max-width: 100vw;
+            position: relative;
+            box-sizing: border-box;
+        }
+        #ball{
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            left: 0px;
+            top: 0px;
+            border-radius: 50%;
+            background-color: #7FFFD4;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="ball">
+
+        </div>
+    </div>
+    <script>
+        var ball=document.getElementById('ball');
+        var container=document.getElementById('container')
+        var lf=0,tp=0;   // letting margin of ball from wall of container
+        window.addEventListener('keydown',function (event){
+            var mw=container.clientWidth
+            var mh=container.clientHeight  //getting container height and width
+            mw=Number(mw)-100
+            mh=Number(mh)-100   // subtracting 100 so ball didn't go out of div
+            if (event.keyCode==68 || event.keyCode==100 || event.keyCode==39){  //fetching key code (ascii value) and comparing to give margin so the
+                lf+=8                                                           // ball seem moving
+                if (lf >= mw){
+                    lf=mw
+                    console.log(lf)   // assigning lf margin = maximum width if left margin become more than maximum width 
+                }
+                ball.style.left=lf+'px';
+            }
+            if (event.keyCode==65 || event.keyCode==97 || event.keyCode==37){
+                lf-=8
+                if (lf < 0){
+                    lf+=8;   // increasing margin if margin become less than 0
+                    console.log(lf)
+                }
+                ball.style.left=lf+'px';
+            }
+            if (event.keyCode==119 || event.keyCode==87 || event.keyCode==38){
+                tp-=8
+                if (tp < 0){  //same here for height
+                    tp+=8;
+                }
+                ball.style.top=tp+'px';
+            }
+            if (event.keyCode==115 || event.keyCode==83 || event.keyCode==40){
+                tp+=8
+                if (tp >= mh){    //same here for height
+                    tp=mh
+                }
+                ball.style.top=tp+'px';
+            }
+        });
+    </script>
+</body>
+</html>

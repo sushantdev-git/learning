@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Login</title></head>
+    <body>
+        <form>
+            <!-- forms are used to collect the user input/data-->
+
+            <label for="un">Username:</label><br>
+            <!-- "for" attribute is used to specify for which element this label is used for
+             and it is paired via "id" of that element-->
+             <!-- You can check which lable is for which input by clicking on label-->
+            <input type="text" id="un" required>
+            <!-- required is used for that element is necessary to be filled-->
+            <div>
+                <label for="pass">Password</label><br>
+                <input type="password" id="pass" required>
+            </div>
+            <div>
+                <input type="submit">
+            </div>
+
+            <div>
+                <label>Enter a number</label>
+                <input type="number">
+            </div>
+
+            <div>
+                <label>Time</label>
+                <input type="time">
+            </div>
+
+            <div>
+                <label>Date</label>
+                <input type="date" min="2002-01-01" max="2010-12-31">
+            </div>
+
+            <div>
+                <label>Email</label>
+                <input type="email" placeholder="abc@example.com">
+            </div>
+
+            <div>
+                <label>URL</label>
+                <input type="url">
+            </div>
+
+            <div>
+                <label>Range</label>
+                <input type="range" min="10" max="50" step="10">
+            </div>
+
+            <div>
+                <label>Hidden</label>
+                <input type="hidden">
+            </div>
+        </form>
+    </body>
+</html>

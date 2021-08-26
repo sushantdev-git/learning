@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    :root{
+        --section-color-blue:#2857a4; /* this variable can be used in whole css
+        file and with changing value of this color you chnage all color in css file.*/
+        --section-color-red:red;
+    }
+    #d1,#d2,#d3,#d4,#d5{
+        height: 100px;
+        width: 100px;
+        border: 2px solid black;
+
+    }
+    #DD div:nth-child(2n){
+        background-color:var(--section-color-red); /*this is how a custom varible is used */
+        margin: 20px;
+    }
+    #DD div:nth-child(2n+1){
+        background-color: var(--section-color-blue);
+        margin: 20px;
+    }
+
+    #d3 div{
+        --section-color-blue:green;   
+        height: 20px;
+        width: 20px;
+        margin: 5px;
+        background-color:var(--section-color-blue);
+    }
+    </style>
+</head>
+<!--
+    creating own css variable
+
+    You can specify scope of vaiable:
+    Ther is two option in the root or inside a div
+
+    In root it is defined as :root{
+        --varname:value;
+    }
+
+    or in div you can specify as{
+        --varname:value;
+    }
+    you can place more than one vlaue for a varname in case if first one not work then second will work
+    ex- div{
+        color:var(--col-red, blue) in case my var name is wrong then blue color will be applied
+    }
+    
+    if the varibel name is same, and it value is chnaged inside a div
+    then the value of the varibale inside childeren of that div will be
+    the changed value, or you can called it inheritance.
+-->
+<body>
+    <div id="DD">
+        <div id="d1">
+            hello
+        </div>
+        <div id="d2">
+            world
+        </div>
+        <div id="d3">
+            how
+            <div>
+
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div id="d4">
+            are
+        </div>
+        <div id="d5">
+            you
+        </div>
+    </div>
+</body>
+</html>

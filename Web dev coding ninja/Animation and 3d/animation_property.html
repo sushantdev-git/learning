@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #ab{
+                height: 200px;
+                width: 200px;
+                position: absolute;
+                top: 20%;
+                left: 20%;
+                background-color: aquamarine;
+                animation: changeShape 1s ease-in-out 4 alternate;
+            }
+
+            @keyframes changeShape {
+                from{
+                    border-radius: 0%;
+                }
+                to{
+                    border-radius: 50%;
+                }
+            }
+        </style>
+    </head>
+    <!--
+        animation property:
+            syntax:
+                animation: indentifier duration ease-in-out repeat;
+                animation: changeShape 1s ease-in-out infinite;
+                ## repeat can be infintie too
+
+        ## we can use cubic bezier function to control the timing of transition
+        @keyframes changeShape {
+                0%{
+                    border-radius: 0%;
+                }
+                25%{
+                    border-radius:25%;
+                }
+                100%{
+                    border-radius: 50%;
+                }
+            }
+    -->
+    <body>
+        <div id="ab">
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+        }
+        button{
+            padding:0.5em;
+            width:140px;
+            margin-top:30px;
+        }
+
+        #container{
+            width:90%;
+            height:auto;
+            min-height: 50px;
+            background-color:lightblue;
+            margin-top:5%;
+            border:10px;
+            border-style: double;
+            border-color: grey;
+            display:flex;
+            flex-direction:row;
+            flex-wrap:wrap-reverse;
+            border-top: none;
+        }
+
+        .circle{
+            height:50px;
+            width:50px;
+            border-radius:50%;
+            background-color:red;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="add_ball()">
+        Add Ball To Basket
+    </button>
+    <button onclick="stop()">
+        Stop
+    </button>
+    <div id="container">
+    </div>
+    <script src="j query file/jquery-3.5.1.js"></script>
+    <script>
+        var color = ['red','yellow','lightgrey','darkorchid','black','orange',
+        'deeppink','green','purple','saddlebrown','lightseagreen',
+        'deepskyblue','firebrick','crimson']
+        var parent = document.getElementById('container');
+        var id;
+
+        function get_random_color(){
+            return color[Math.floor((Math.random()*color.length))]
+        }
+
+        function add_ball(){
+            console.log("hello");
+            id = setInterval(function(){
+                let random_color = get_random_color();
+                let d = document.createElement('div');
+                $(d).addClass("circle");
+                $(d).css({
+                    backgroundColor:random_color,
+                })
+                $(d).appendTo($(parent));
+            },50)
+        }
+
+        function stop(){
+            clearInterval(id);
+        }
+
+    </script>
+</body>
+</html>

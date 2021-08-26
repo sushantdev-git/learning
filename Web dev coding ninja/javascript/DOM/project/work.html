@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> 
+        var i=0;
+        function time(){
+                i++
+                
+                document.getElementsByClassName('para')[0].innerHTML=i;
+                document.getElementsByClassName('para')[1].innerHTML=i+1;
+                if(i==15){
+                    clearInterval(id)
+                }
+        }
+        function sa(){
+            id=setInterval(document.getElementById('div2').style.animation="move 1s",1000)
+        }
+    </script>
+    <style>
+        #outerdiv{
+            height: 200px;
+            width: 200px;
+            overflow: hidden;
+        }
+        #div1{
+            height: 200px;
+            width: 200px;
+            background-color:lightgreen;
+            transition: all 1s;
+            font-size: 4rem;
+        }
+        #div2{
+            height: 100%;
+            width: 100%;
+            background-color: pink;
+            transition: all 1s;
+            font-size: 4rem;
+            transform: translateY(100%);
+        }
+        /* #div1:hover #div2{
+            transform: translateY(0%);
+        } */
+        /* .abc{
+            border-top: 2px solid white;
+            height: 100%;
+            width: 100%;
+            background-color: pink;
+            transform: translateY(100%);
+            animation: move 1s ease-in-out infinite ;
+        } */
+        @keyframes move {
+            0%{
+                transform: translateY(100%);
+            }
+            100%{
+                transform: translateY(0%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <button id="btn" onclick="sa()">Click me</button>
+    <div id="outerdiv">
+        <div id="div1">
+            <span class="para" style="position: absolute;"></span>
+            <div id="div2">
+                <span class="para"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

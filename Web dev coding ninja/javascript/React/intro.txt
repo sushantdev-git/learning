@@ -1,0 +1,126 @@
+React is built by facebook in may 2013
+React is most popular java script library and it is used for building interfaces.
+
+many giants uses React
+
+react can be used in mobile application/web application/ desktop application/ vr application
+
+how many people actullay use react
+    it is used by over 2 million user react
+
+
+
+
+Component based architecture of react:
+
+    in react you divide your website in multiple component and 
+    put them together to build the website
+
+    IN case of youtube.com
+        1.Navbar is one component
+        2.Side bars is one component
+        3.Each video box/card is one component  (you can use these video card multipel time)
+        4.sign in/out button is an component
+        
+
+        In side bar:
+            in subscription tab youtube use api to fetch your subscribed channels
+            channel and show under subscription tab
+            and rest of the component remain unalterd 
+
+Why do we use these library:
+    There are two ways to make web app:
+
+        Multiple page application:
+            in multi page application there are text/ image/ js / css
+            different for different part of web page
+                Like you are on home page and you click about, then
+                browser will request for about page, and load that whole page
+                that is not good way, as it causes delay to load all html /css and js file
+            
+            jeffery's.com is a multi page appliction
+            navigation bar is same but content is changed
+
+
+        Single page application:
+            the web page is not get reloaded again and again
+            if you request from some data then, where that data is going 
+            to be place on website that will be destroyed and updated with
+            new data
+            it is done through API
+
+            single page application are fast
+
+            bad things/drawbacks about multi page application is;
+                seo optimization
+                history
+
+
+            condingninja website
+                nava bar, footer remain same , only that part got chaged 
+                according to button you clicked on navbar
+        
+
+MVC- Modal view architecture
+React is V in MVC
+
+
+React v/s Other:
+    what is a framwork:
+
+        Angular is an framwork
+
+        framework provide structure to the application how our application should be structure
+
+        framwork provide lot of functionalities out of the box 
+            like: routing, making ajax request, templating etc.
+
+        framework extensively use api, so it is harder to learn sometime 
+
+    what is a library:
+        if you want to manipulate the dom
+        you don't have to write lot of vanilla js code
+        jQuery is one of the best js library
+        lodash is also one js library
+
+        React is part of a library
+            and it is V in MVC pattern
+
+        There are two types of pattern:
+
+                ↶   MODEL   ↷
+
+            VIEW           CONTROLLER
+
+                ↘           ↙
+
+                    USER
+
+
+            MVC-Modal view architecture
+
+                Modal is data of application
+                    let modal have name "abc"
+
+                view will display name on webpage
+                    view display "abc"
+
+                User sees "abc"
+
+                Controller - if user do some action like onclick
+                    then that action will be handeld by Controller
+                        change name();
+
+                    controller will change the data accordin to user need
+
+                    view will display the name:
+                        this time something "efg"
+                
+There are tools which used behind in react app:
+    Babel: Babel is used to compile JSX into javasript
+            JSX - is javasript XML file
+                it is used to write html in react
+    
+    Webpack: webpack is a bundler and it bundle all you files in one file
+            and return it which can be directly used in you html main file
+

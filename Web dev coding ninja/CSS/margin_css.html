@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html{
+                font-size: 30px;
+            }
+            #outer-div1{
+                height: 200px;
+                width:200px;
+                background-color: #393a7b;
+                /* margin: auto; */
+                margin-bottom: 10px;
+                padding: 10px;
+
+            }
+            #inner-div1{
+                height: 50%;
+                width:50%;
+                background-color: cyan;
+                
+            }
+            #outer-div2{
+                height: 200px;
+                width:200px;
+                background-color: orange;
+                margin-top: 10px;
+                
+            }
+            #div1{
+                background-color: red;
+                height: 200px;
+                width: 200px;
+            }
+            #div2{
+                background-color: cyan;
+                height: 200px;
+                width: 200px;
+            }
+            span{
+                display: block;
+            }
+            #div1,#div2{
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <!--Margin
+            margin is space around the element
+            margin can be applied as  margin: TRLB / TB RL/ T LR B/ T R B L
+            margin-top:10px; and so on.....
+            margin:auto; place elemnt in center
+
+            # in verticle margin the margin will collapse i.e which one will be greater that will be applied
+            # horizontal margin add-up
+
+
+        Padding
+            padding is space within element or space b/w element border and element
+            padding can be applied as  padding: TRLB / TB RL/ T LR B/ T R B L
+
+        Display Properties:
+            display: inline, block, inline-block, none, hidden;
+            display properties is used to convert "block" element to "inline" and vice-versa
+            # defalult margin in inline block is 4px
+
+
+    -->
+    <body>
+        <div id="outer-div1">
+            <div id="inner-div1">
+
+            </div>
+        </div>
+        <div id="outer-div2">
+
+        </div>
+        <span>Text 1</span>
+        <span>Text 2</span>
+        <div id="div1"></div>
+        <div id="div2"></div>
+    </body>
+</html>

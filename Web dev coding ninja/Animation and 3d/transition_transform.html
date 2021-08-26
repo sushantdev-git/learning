@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #ab{
+                height: 100px;
+                width: 100px;
+                position: absolute;
+                top: 20%;
+                left: 20%;
+                background-color: aquamarine;
+                transition: all 1s ease-in-out;
+            }
+            #ab:hover{
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                transform: translateX(100px);
+            }
+        </style>
+    </head>
+    <!--
+        Transform:
+            1. rotate(), rotateX(), rotateY()
+            2.scale(x,y)
+            3.translate(x,y), translateX(10%)
+            4.skew(x,y), skewX()
+        
+       Transition:
+            transition:all 1s ease-in-out 0.5(delay);
+                ease, ease-in, ease-out, ease-in-out, linear
+    -->
+    <body>
+        <div id="ab">
+
+        </div>
+    </body>
+</html>

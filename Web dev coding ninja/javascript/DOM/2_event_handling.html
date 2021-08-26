@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            background-color: red;
+        }
+    </style>
+</head>
+<!--
+    How to add js to html file
+    1> You can use scrpit tag and you can place it at bottom of body
+    2>You can also link an external js and place is also at bottom of body tag
+        <script type="text/javascript" src="script.js"></script>
+-->
+<body>
+    <button id="btn">Say hello</button>
+    <p id="para"></p>
+    <script>
+        //click event
+        var butn=document.getElementById('btn')// here i am creating object of the element
+        butn.addEventListener('click',function(){
+            alert("hello");
+        });
+
+        //mouseover event
+        var para=document.getElementById('para')
+        butn.addEventListener('mouseover',function(){  // in addEventListner you have to pass action and function
+            para.innerHTML=("abe gandu!!!!!")
+        })
+
+        //mouseout event
+        butn.addEventListener('mouseout',function(){
+            para.innerHTML="gaali kha kr aaya mja ;-)";
+        });
+        //if there are more then on listner then event will happen simultaneously
+    </script>
+</body>
+</html>

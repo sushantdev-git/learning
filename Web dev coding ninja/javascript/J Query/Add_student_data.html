@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            display: flex;
+            flex-direction: row;
+            height: 96vh;
+            width: 100%;
+        }
+        #tble{
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+            height: 100%;
+        }
+        #tble h1{
+            margin-bottom: 50px;
+        }
+        table tr td{
+            padding: 30px;
+        }
+        #tble button{
+            display: block;
+            padding: 10px;
+            width: 200px;
+        }
+        #details{
+            flex: 1;
+            height: 100%;
+            border-left: 4px solid grey;
+            overflow: scroll;
+        }
+        #details div:nth-child(2n+1){
+            background-color: grey;
+        }
+        #details span{
+            background-color:lightgreen;;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="tble">
+            <h1>Add Student Data</h1>
+            <table>
+                <tr>
+                    <td>Roll No.</td>
+                    <td><input type="text" class="data" required></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" class="data" required></td>
+                </tr>
+                <tr>
+                    <td>Marks</td>
+                    <td><input type="number" class="data" required></td>
+                </tr>
+            </table>
+            <button onclick="add_details()">Add Details</button>
+        </section>
+        <section id="details">
+        </section>
+    </main>
+    <script src="j query file/jquery-3.5.1.js"></script>
+    <script>
+        var parent = document.getElementById("details")
+        
+        function add_details(){
+            let d = document.createElement('div');
+            let rollNO = $(".data").eq(0).val();
+            let name = $(".data").eq(1).val();
+            let marks = $(".data").eq(2).val();
+            if(!(rollNO == "" || name == "" || marks == "")){
+                console.log(rollNO,name,marks)
+                //let pa = document.createElement('p');
+                $("<p>Roll no - <span>"+rollNO+"</span> , <span>"+name+"</span> has scored <span>"+marks+"</span> marks </p>").appendTo(d)
+                $(d).appendTo($(parent))
+
+                
+                let data = document.getElementsByClassName("data")
+                for(i in data){
+                    data[i].value="";
+                }
+
+
+            }
+            else{
+                alert("Fill in the details")
+            }
+
+
+        }
+    </script>
+</body>
+</html>

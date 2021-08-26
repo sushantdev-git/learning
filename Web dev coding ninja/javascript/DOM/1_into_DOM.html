@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--
+    DOM - stand for Document Object Model
+    we can understand dom as hierachy structure of element ih html page
+    window > document > html and so on
+
+    API -- Application programming Interface
+        code written by someone else and it is easy to use by sombody else.
+    
+    window.location==document.location  ans> True
+        The window.location object can be used to get the current page address (URL) and to redirect the browser to a new page. 
+        The Document.location read-only property returns a Location object, which contains information about the URL of the document 
+        and provides methods for changing that URL and loading another URL.
+-->
+<body>
+    <h1 id="hoo1"> first Heading</h1>
+    <h1 id="hoo2"> second Heading</h1>
+    <p class="para">This is a paragraph</p>
+    <p class="para">This is another paragraph</p>
+    <p class="para">This is another paragraph</p>
+    <p class="para">This is another paragraph</p>
+    <p class="para">This is another paragraph</p>
+    <p class="para">This is another paragraph</p>
+    <p class="para">This is another paragraph</p>
+    <p class="para">This is another paragraph</p>
+    <script>
+        // acessing element in DOM modal
+        var heading=document.getElementById("hoo1");
+        heading.style.color="red";
+        heading.style.fontFamily="sans-serif";
+        heading.style.backgroundColor="green";
+
+        var headings=document.getElementsByTagName('h1');
+        headings[1].style.color="green"; // accessing first element of h1 tag
+        headings[1].style.fontFamily="Cursive";
+        headings[1].style.backgroundColor="pink";
+
+        var para=document.getElementsByClassName('para');
+        para[0].style.color='orange';
+        para[0].style.backgroundColor='green'  //while using class name and tag name you have to specify the index of the element which you are targetting
+
+        //you can select element like this also
+        var heading=document.querySelector('#hoo2')
+        heading.style.color="gold";
+
+        var para=document.querySelector('.para')
+        var para=document.querySelectorAll('.para') // to select all element with class para
+        var count=0
+        function changecolor(){
+            para[count].style.color='pink';
+            para[count].style.backgroundColor='green';
+            para[count].style.fontSize='x-large';
+            count+=1
+            if(count==para.length){
+                clearInterval(id)
+            }
+        }
+        var id=setInterval(changecolor,1000);
+
+    </script>
+</body>
+</html>

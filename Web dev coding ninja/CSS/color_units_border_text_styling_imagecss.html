@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html{
+                font-size: 30px;
+            }
+            #a1{
+                height: 4rem;
+                width: 6rem;
+                /* height: 100vh; */
+                /* width: 100vw; */
+                background-color: blue;
+                border: groove red;
+                border-width: 5px 5px 5px 5px;
+                border-radius: 5px;
+            }
+
+            #div2{
+                height: 50%;
+                width: 50%;
+                background-color: yellow;
+            }
+            #sample_para{
+                /* border:2px solid red; */
+                border-left: 4px solid red;
+                border-bottom-left-radius: 30%;
+                border-left-width: none;
+            }
+
+            #para{
+                font-size: 30px;
+                color: dimgray;
+                font-weight: 700;
+                text-align: justify;
+                line-height: 30px;
+                word-spacing: 30px;
+                text-transform: uppercase;
+                text-decoration: underline;
+                font-style: italic;
+            }
+
+            #image{
+                height: 100vh;
+                width: 100vw;
+                background-image: url("image/coding_ninjas.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size:contain;
+                background-attachment: fixed;
+            }
+        </style>
+    </head>
+    <!--1.Color
+            there are 140 pre defined color
+            color can be provided in hex code / name / rgb(25,126,200) / rgba(R,G,B,Opacity 0-1) / hsl(Hue, saturation, lightness)/ hsla()
+            Hex code =
+                        #  R   G   B
+                        - - - - - -  This is 6 digit code 2 digit for each RGB
+        2.Units
+            Absolute: fixed
+                cm, inch(in), px     # 1px=1/96 inch  #1 css pixel != 1 device pixel
+
+            relative:
+            % -      relative to parent
+            vh,vw -  relative to viewport/ window size ex- 75vh -- 75% of viewport height
+            rem-     relative to font size of root   1rem=20px 
+            em -     relative to font size of parent   1em=10px
+        3.Border
+            border-width: 2px; you can specify value like  TB LR / T LR B / T R B L
+            border-style: solid, dotted, dashed, groove
+            border-color: color
+            border-radius: 10px/%
+            or specifically border-left,border-rigth etc..
+        4.Text styling
+            font-size: 30px;
+            color: dimgray;
+            font-weight: bold, bolder, normal, thin or you can give a no range(100 - 700)
+            text-align: right, left , justify
+            line-height: px/rem        - Height b/w line
+            text-transform: uppercase, lowercase, capitalize
+            text-decoration:  underline, etc..
+        
+    -->
+    <body>
+        <div id="a1">
+            <div id="div2">
+            </div>
+        </div>
+        <div id="sample_para">
+            <h2>Sample Text</h2>
+        </div>
+        <p id="para">
+            A front-end developer has to keep himself/herself updated continuously with the latest news and innovations in the field. You need to take a proactive stand and learn new things about front-end development from informative blogs and videos. Following are some of the most informative and useful learning sources for front-end developers -
+        </p>
+        <div id="image">
+        </div>
+        
+    </body>
+</html>

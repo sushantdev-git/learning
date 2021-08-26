@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html{
+                font-size: 30px;
+            }
+            #outer-div{
+                border: 2px solid black;
+                margin: 20px;
+                position: relative;
+            }
+            #inner-div1{
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+                position: absolute;
+            }
+            #inner-div2{
+                width: 200px;
+                height: 200px;
+                background-color: orange;
+                position: relative;
+                left: 100px;
+                top: 20px;
+                z-index: 2;
+            }
+            #inner-div3{
+                width: 200px;
+                height: 200px;
+                background-color: darkred;
+                position: absolute;
+            }
+            #inner-div4{
+                width: 200px;
+                height: 200px;
+                background-color: green;
+                position: relative;
+                left: 100px;
+                top: 20px;
+            }
+            #mail{
+                background-color: red;
+            }
+            #mail img{
+                width: 100%;
+                height: 100%;
+                vertical-align: middle;
+            }
+            .social-btn{
+                width: 20px;
+                height: 10px;
+            }
+        </style>
+    </head>
+    <!--
+        Position property
+            1.static - element is placed where it is supposed to be
+            2.relative - The element will be posioned relative to its normal position. The element original position in reserved and not anything can be filled there.
+            3.absolute - Positioned with repsect to first postion parent/ and no area in reserved for the element , it is like element over another element.
+            4.fixed - element is fixed relative to viewport.
+            5.sticky - element is fixed on its position inside the parent div. you can specify when it start behaving like fix with ex - top-20px,bottom etc..
+
+    -->
+    <body>
+        <div id="outer-div">
+            <div id="inner-div1"></div>
+            <div id="inner-div2"></div>
+            <div id="inner-div3"></div>
+            <div id="inner-div4"></div>
+            <p>hwekjsdlkalkfklashjflkslafksafdklsdafhjlakshfjhasjkdfasjdlflsadhfsdlhfjk</p>
+            
+        </div>
+        <div class="social-btn">
+        <a id="mail"  target="_blank" href="mailto:adresse@example.com?subject=7%20best%20coding%20practices%20to%20follow%20%7C%20blog.codingninjas.in&body=http%3A%2F%2Fblog.codingninjas.in%2F2018%2F04%2F02%2Fbest-coding-practices-for-hassle-free-programming%2F">
+            <img class="social-img" src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000019_1549330510_mail-logo.png" alt="mail"></a>
+        </div>
+    </body>
+</html>

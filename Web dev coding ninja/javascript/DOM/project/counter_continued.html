@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        .container{
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            background-image: linear-gradient(45deg,lightblue,skyblue);
+            box-sizing: border-box;
+            padding-top:7%;
+            min-width: 755px;
+            min-height: 700px;
+        }
+        #value{
+            position: relative;
+            height: 20%;
+            width: 90%;
+            margin:auto;
+            background-image: linear-gradient(45deg,skyblue,lightpink);
+            color: white;
+            font-size: 1.2em;
+            text-align: center;
+            letter-spacing: 5px;
+            word-spacing: 20px;
+            box-sizing: border-box;
+            padding: 1% 5%;
+
+        }
+        #no_entry{
+            float: left;
+            height: 30%;
+            width: 30%;
+        }
+        #btn{
+            float: right;
+            height: 30%;
+            width: 30%;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 3px 5px 2px white;
+
+        }
+
+        #timer{
+            height: 30%;
+            width: 80%;
+            margin:5% auto;
+            background-color: rgb(48, 48, 48);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+        #time_box_container{
+            height: auto;
+            width: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .outerdiv{
+            height: 100px;
+            width: 100px;
+            margin: 0px 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        .timer_box{
+            position: absolute;
+            height: 90px;
+            width: 100px;
+            background-color: lightblue;
+            color: black;
+            font-size: 4rem;
+            font-weight: lighter;
+            text-align: center;
+            border-top: 5px solid rgb(46, 46, 46);
+            box-shadow: 0px -1px 5px  white;
+            
+        }
+        .time_inner_box{
+            height: 90px;
+            width: 100px;
+            background-color: lightblue;
+            color: black;
+            font-size: 4rem;
+            font-weight: lighter;
+            border-top: 5px solid rgb(46, 46, 46);
+            text-align: center;
+            transform: translateY(-87%);
+        }
+
+        .time{
+            vertical-align: middle;
+        }
+
+        .animate{
+            height: 90px;
+            width: 100px;
+            background-color: lightblue;
+            color: black;
+            font-size: 4rem;
+            font-weight: lighter;
+            border-top: 5px solid rgb(46, 46, 46);
+            text-align: center;
+            transform: translateY(-87%);
+            animation: move 1s linear 1;
+        }
+
+        @keyframes move {
+            0%{
+                transform: translateY(0%);
+            }
+            100%{
+                transform: translateY(-87%);
+            }
+        }
+        #btn_prop{
+            float: right;
+            height: 30%;
+            width: 30%;
+            border: none;
+            border: 1px solid skyblue;
+            border-radius: 0px;
+            box-shadow: 0px 3px 5px 2px white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="value">
+            <p>Enter Value From 1 to 99999</p>
+            <input type="number" id="no_entry"><button id="btn"><b>Start Counter</b></button>
+        </div>
+        <div id="timer">
+            <div id="time_box_container">
+                <div class="outerdiv">
+                    <div class="timer_box">
+                        <span class="time">0</span>
+                        <div class="time_inner_box">
+                            <span class="time">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="outerdiv">
+                    <div class="timer_box">
+                        <span class="time">0</span>
+                        <div class="time_inner_box">
+                            <span class="time">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="outerdiv">
+                    <div class="timer_box">
+                        <span class="time">0</span>
+                        <div class="time_inner_box">
+                            <span class="time">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="outerdiv">
+                    <div class="timer_box">
+                        <span class="time">0</span>
+                        <div class="time_inner_box">
+                            <span class="time">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="outerdiv">
+                    <div class="timer_box">
+                        <span class="time">0</span>
+                        <div class="time_inner_box">
+                            <span class="time">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var btn=document.getElementById('btn')
+        var settime=document.getElementsByClassName('time')
+        var time_box=document.getElementsByClassName('time_inner_box')
+        var count=0;
+        var fval=0,sval=0,tval=0,fval=0,fival=0;
+        btn.addEventListener('click',function(){
+            no=document.getElementById("no_entry").value;
+            no=Number(no)
+            btn.setAttribute('id','btn_prop')
+            count=0,fval=0,sval=0,tval=0,fval=0,fival=0;
+            settime[9].innerHTML=fval
+            settime[8].innerHTML=fval
+            settime[7].innerHTML=sval
+            settime[6].innerHTML=sval
+            settime[5].innerHTML=tval
+            settime[4].innerHTML=tval
+            settime[3].innerHTML=fval
+            settime[2].innerHTML=fval
+            settime[1].innerHTML=fival
+            settime[0].innerHTML=fival
+            time();
+
+        })
+        function timeUpdate(){
+                count++
+                console.log(count,no)
+                fval++
+                settime[9].innerHTML=fval;
+                settime[8].innerHTML=fval-1
+                time_box[4].setAttribute('class','animate')
+                
+
+
+                if (fval==10){
+                    sval++;
+                    time_box[3].setAttribute('class','animate')
+                    settime[7].innerHTML=sval
+                    fval=0
+                    settime[9].innerHTML=fval
+                    settime[6].innerHTML=sval-1
+                }
+                if (sval==10){
+                    tval++
+                    settime[5].innerHTML=tval
+                    sval=0
+                    settime[7].innerHTML=sval
+                    settime[4].innerHTML=tval-1
+                }
+                if(tval==10){
+                    fval++
+                    settime[3].innerHTML=fval
+                    tval=0
+                    settime[5].innerHTML=tval
+                    settime[2]=fval-1
+                }
+                if(fval==10){
+                    fival++
+                    settime[0].innerHTML=fival
+                    fval=0
+                    settime[3].innerHTML=fval
+                    settime[1]=fival-1
+                }
+                if (count==no || no==0){
+                    clearInterval(id)
+                }
+                time_box[4].classList.remove("animate")
+                
+        }
+        function time(){
+            id = setInterval(timeUpdate,1000)
+        }
+
+    </script>
+</body>
+</html>

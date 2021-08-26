@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #container{
+                height: 400px;
+                width: auto;
+                background-color: lightgray;
+                display: flex;
+                flex-direction:row;
+                flex-wrap: wrap;
+            }
+            #container div{
+                height: 40%;
+                width: 40%;
+            }
+            #div1{
+                background-color: violet;
+                /* order:1; */
+                flex-grow: 1;
+            }
+            #div2{
+                background-color: red;
+                flex-grow: 1;
+            }
+            #div3{
+                background-color: grey;
+                flex-grow: 1;
+            }
+            #div4{
+                background-color: brown;
+                flex-grow: 1;
+            }
+            #div5{
+                background-color: orange;
+                flex-grow: 1;
+            }
+        </style>
+    </head>
+    <!--
+            default direction of  flex is row
+            You can change direction with
+        1.flex-direction: row, column, row-revers, column-reverse
+
+        2.Order=-1,0,1,2,3 etc   Oreder is used for give numbering to div and arrange it according to order
+            defalut order value is 0 and order can be set any integer -ve,-0,+ve
+        
+        Flex tries to put all flex elements in one line, if there is more div and width of all div together in more than width of container
+        If you don't want this happen use
+        3.flex-wrap: wrap, wrap-reverse,no-wrap
+            IN wrap-reverse the elemets will be places from bottom to top -- in flex-direction row and row-reverse
+            IN wrap-reverse the elemets will be places from right to left -- in flex-direction column and column-reverse 
+
+        Here, if you want to flex adjust itself accoording to space left in container you can use
+        4.flex-grow:1,2,3 etc
+            Here these no signify in which proportion the flex item shoud grow
+        
+        Here, if you want to flex adjust itself accoording to container if  there is less width of container compare to sum of width of all elements, you can use
+        5.flex-shtink:1,2,3 etc.
+        
+            Here these no signify in which proportion the flex item shoud shrink
+        
+        
+        
+ 
+        
+
+    -->
+    <body>
+        <div id="container">
+            <div id="div1">Div 1</div>
+            <div id="div2">Div 2</div>
+            <div id="div3">Div 3</div>
+            <div id="div4">Div 4</div>
+            <div id="div5">Div 5</div>
+        </div>
+    </body>
+</html>

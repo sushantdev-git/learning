@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #container{
+                width: 40px;
+                height: auto;
+                border: 2px solid black;
+                overflow-wrap: anywhere;/*normal,break-word,anywhere*/
+            }
+            #gradient{
+                width: 200px;
+                height: 200px;
+                /* background-image: linear-gradient(to top right,red,blue); */
+                /* linear-gradient(to right/left/bottom/right or top right  or  75deg, color %,color %,color px) % represent the amout of area 
+                coverd by that colour */
+                background: repeating-linear-gradient(to top right,red,blue 10px);
+            }
+            #radial-gradient{
+                margin: 20px;
+                width: 200px;
+                height: 200px;
+                background:radial-gradient(red,cyan,blue)
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <p>This is a sample Document</p>
+        </div>
+        <div id="gradient"> 
+        </div>
+        <div id="radial-gradient"></div>
+    </body>
+</html>

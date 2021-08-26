@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #container{
+                height: 400px;
+                width: 400px;
+                background-color: lightgray;
+                display: flex;
+                flex-direction: row;
+                /* flex-wrap: wrap-reverse; */
+                justify-content: center; 
+                align-items:center;
+            }
+            #container div{
+                height: 100px;
+                width: 100px;
+            }
+            #div1{
+                background-color: violet;
+                /* order:1; */
+                /* flex-grow: 1; */
+            }
+            #div2{
+                background-color: red;
+                /* flex-grow: 1; */
+            }
+            #div3{
+                background-color: grey;
+                /* flex-grow: 1; */
+            }
+        </style>
+    </head>
+    <!--
+        #### (imp) Justify-content is used to place flex elemetns "Horizontally-depending" or "main-axis" , while align-items is used to place content "Vertically-depending" or "cross-axis"#########
+
+        justifty-content:felx-start(default), flex-end, center, space-around, space-between
+            flex-start, flex-end, center is used to positon flex as name suggest
+            space-around- if the extra space is available, it will position flex as every flex get equal amout of space around
+            space-between- if the extra space is available, it will position flex as there is equal space between every flex
+        
+        align-items:flex-start,flex-end,center,stretch,baseline
+            flex-start, flex-end is used to position flex as name suggest vertically
+            strecth- is used if you want to stretch the flex element to full height, but it will only work if height of div are given "auto",
+                otherwise it will not work
+            baseline- baseline is used to align every div according to their base of o bottom part
+
+    -->
+    <body>
+        <div id="container">
+            <div id="div1">Div 1</div>
+            <div id="div2">Div 2</div>
+            <div id="div3">Div 3</div>
+        </div>
+    </body>
+</html>

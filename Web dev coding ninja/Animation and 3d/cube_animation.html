@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube animation</title>
+    <style>
+        body{
+            background-color:black;
+        }
+        #cube{
+            height: 100px;
+            position: relative;
+            width: 100px;
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            perspective: 1000px;  /* how in the cube is inside the screen*/
+            transform: rotateX(25deg) rotateY(-25deg);
+            box-shadow: 10px 10px 10px 10px lightgery;
+            animation: bounce 5s ease-in-out infinite alternate;
+        }
+        .face{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            transition: all 1s;
+        }
+        .one{
+            background-color: skyblue;
+        }
+        .two{
+            background-color: orange;
+            transform: rotateY(90deg) translateX(-50px) translateZ(-50px);
+        }
+        .three{
+            background-color:seagreen;
+            transform: rotateY(90deg) rotateX(90deg) translateZ(-50px) translateX(-50px);
+        }
+        .four{
+            background-color: palevioletred;
+            transform:rotateY(90deg) rotateX(90deg) translateX(-50px)translateZ(50px);
+        }
+        .five{
+            background-color: purple ;
+            transform: translateZ(100px);
+        }
+        .six{
+            background-color: aqua;
+            transform: rotateY(90deg) translateZ(50px) translateX(-50px);
+        }
+
+        @keyframes bounce {
+            0%{
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            100%{
+                transform: rotateX(360deg) rotateY(180deg);
+            }
+        }
+
+        .face:hover{
+            border-radius: 50%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="cube">
+        <div class="face one"></div>
+        <div class="face two"></div>
+        <div class="face three"></div>
+        <div class="face four"></div>
+        <div class="face five"></div>
+        <div class="face six"></div>
+    </div>
+</body>
+</html>

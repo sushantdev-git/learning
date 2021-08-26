@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .styled-first-letter::first-letter{
+                font-size: 2rem;
+                font-weight: bold;
+                text-transform: capitalize;
+                color:seagreen;
+            }
+            p{
+                background-color: lightgrey;
+            }
+            #h1::before{
+                content: 'Before '; /* content cannot be skipped*/
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-transform: capitalize;
+            }
+            #h1::after{
+                content: '';
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                background-size: contain;
+                background-image: url(../../google.png);
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-transform: capitalize;
+            }
+
+            .quote::before{
+                content: '"';
+            }
+            .quote::after{
+                content: '"';
+            }
+
+            ul{
+                list-style: none;
+            }
+            ul li::before{
+                content: "";
+                display: inline-block;
+                height: 20px;
+                width: 20px;
+                background-size: contain;
+                background-image: url(../../google.png);
+            }
+
+            .fline::first-line{
+                font-family: sans-serif;
+                font-size: 1.5rem;
+            }
+        </style>
+    </head>
+    <!--
+        pseudo classes:
+            ::first-letter
+            ::first-line
+
+            ::before,::after - adding content before and after element
+
+    -->
+    <body>
+        <p class="styled-first-letter">learn about pseudo element</p>
+        <p class="quote">learn about pseudo element</p>
+        <p class="quote">learn about pseudo element</p>
+        <p id="h1">Hello world</p>
+
+        <ul>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+        </ul>
+
+        <p class="fline">In a small room in a once-abandoned government building, a young man, no more than eighteen years of age, was standing in a metal tub as two attendants tended to what seemed to be important preparations.</p>
+        <!-- first line wiill be considered as first line rendered in browser-->
+    </body>
+</html>

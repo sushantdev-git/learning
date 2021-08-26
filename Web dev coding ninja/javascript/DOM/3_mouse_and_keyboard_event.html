@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            box-shadow: 5px 5px 5px 2px grey;
+            display: block;
+            margin: 10% auto 0% auto;
+        }
+        .op{
+            text-align: center;
+            margin: auto;
+            display: block;
+        }
+    </style>
+</head>
+<!--
+    in case of keyboard event there are three main event
+    1>keypress #this dosen't notice of enter shift up down keys
+    2>keydown # this notice all the keys pressed
+    3>keyup
+-->
+<body>
+    <button id="btn" type="button"></button>
+    <p class="op">Box clicked <span id="para1">0</span> times</p>
+    <p class="op">Box Hover in <span id="para2">0</span> times</p>
+    <p class="op">Box Hover out <span id="para3">0</span> times</p>
+    
+    <textarea class="op" id="search" rows="10" cols="10"></textarea><p class="op">key pressed <span id="para4"></span> times</p>
+    <script>
+        var cl=0;
+        var mov=0;
+        var mo=0;
+        var btn=document.getElementById('btn');
+        var para1=document.getElementById('para1')
+        var para2=document.getElementById('para2')
+        var para3=document.getElementById('para3')
+
+
+        var searchInput=document.getElementById('search')
+        var kp=0;
+        var para4=document.getElementById('para4')
+        btn.addEventListener('click',function(){
+            cl++;
+            para1.innerHTML=cl;
+        })
+
+        btn.addEventListener('mouseover',function(){
+            mov++;
+            para2.innerHTML=mov;
+        })
+
+        btn.addEventListener('mouseout',function(){
+            mo++;
+            para3.innerHTML=mo;
+        })
+
+        searchInput.addEventListener('keydown',function(event){  //or you can use document istead of searchInput to activate keypress event on full screen.
+            kp++;
+            para4.innerHTML=kp;                 // you can pass the press event in the function and check which key is pressed
+            console.log(event.keyCode)          //using event.keyCode
+        })
+
+    </script>
+</body>
+</html>

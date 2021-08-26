@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outerdiv{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            box-sizing: border-box;
+            position: relative;
+            padding: 50px;
+        }
+        #innerdiv{
+            height: 100px;
+            width: 100px;
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <div id="outerdiv">
+        <div id="innerdiv">
+
+        </div>
+    </div>
+    <script>
+        //"use strict" # this is known as strict mode and its syntax
+        /*
+            if i define js to work in strict mode then
+            it will be start giving me error and if i miss 
+            defining the scope of variable inside a function
+            # you can create strict mode inside only fucntion also
+            #just write "use strict" in 1st line of function
+        */
+        /*
+            event porpagation happen from bottom to top
+            i.e innverDiv -> outerDiv -> document
+            if you click on inner div click event for all of its parent element will be triggred, this is known as event porpagation
+            this is also known as event bubbling
+        */
+        var innerDiv = document.getElementById('innerdiv')
+        innerDiv.addEventListener('click',function(event){
+            console.log('Click Inner Div')
+            event.stopPropagation(); // to stop the propagation we use this method.
+        });
+
+        var outerDiv = document.getElementById('outerdiv')
+        outerDiv.addEventListener('click',function(event){
+            console.log('Click outer Div')
+            event.stopPropagation();
+        });
+
+        document.addEventListener('click',function(){
+            console.log('click document')
+        })
+    </script>
+</body>
+</html>

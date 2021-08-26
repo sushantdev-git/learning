@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #d1{
+                height: 200px;
+                width: 200px;
+                background-color: violet;
+                margin:20% 25%;
+                position: absolute;
+                animation: bounce 2s ease-in-out infinite alternate;
+            }
+            @keyframes bounce {
+                0%{
+                    transform: translateY(0px);
+                }
+                10%{
+                    transform: translateY(100px);
+                }
+                20%{
+                    transform: translateY(0px);
+                }
+                30%{
+                    transform: translateY(80px);
+                }
+                40%{
+                    transform: translateY(0px);
+                }
+                50%{
+                    transform: translateY(60px);
+                }
+                60%{
+                    transform: translateY(0px);
+                }
+                70%{
+                    transform: translateY(40px);
+                }
+                80%{
+                    transform: translateY(0px);
+                }
+                90%{
+                    transform: translateY(20px);
+                }
+                100%{
+                    transform: translateY(0px);
+                }
+            }
+
+            /* spin animation */
+            #d2{
+                height: 200px;
+                width: 200px;
+                background-color:rgb(40, 40, 206);
+                margin: 20px auto;
+                animation-name: shape, size, rotate;
+                animation-duration: 0.8s, 0.8s, 0.8s;
+                animation-iteration-count: infinite, infinite, infinite;
+                animation-direction: alternate, alternate, alternate;
+            }
+            @keyframes shape {
+                form{
+                    border-radius: 0%;
+                }
+                to{
+                    border-radius: 50%;
+                }
+            }
+            @keyframes size {
+                from{
+                    height: 200px;
+                    width: 200px;
+                }
+                to{
+                    height: 80px;
+                    width: 80px;
+                }
+            }
+            @keyframes rotate {
+                form{
+                    transform: rotate(0deg);
+                }
+                to{
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="d1" align="center">
+            Bounce
+        </div>
+        <div id="d2" align="center">
+            Spin
+        </div>
+    </body>
+</html>

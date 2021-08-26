@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch me if you can</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        #container{
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            box-sizing: border-box;
+            border: 20px ridge rgb(16, 43, 16);
+        }
+        #box{
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            background-color: purple;
+            box-sizing: border-box;
+            padding: 1%;
+            color: white;
+            left: 0px;
+            top: 0px;
+            transition: all 0.2s;
+
+        }
+        #box b{
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="box">
+            <p><b>Catch me</b></p>
+        </div>
+    </div>
+    <script>
+        var box=document.getElementById('box');
+        var cnt=document.getElementById('container')
+        var box_left=0,box_top=0;
+        window.addEventListener('mouseover',function(){
+            box.style.top=getRandom(0,(cnt.clientHeight-100))+'px';  // applying random margin to box
+            box.style.left=getRandom(0,(cnt.clientWidth-100))+'px';
+        })
+
+        function getRandom(min,max){  // here creating random no between (minimum height and maximum height) && (minimum width and maximum width)
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random()*(max-min))+min;
+        }
+
+
+    </script>
+</body>
+</html>

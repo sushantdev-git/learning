@@ -1,0 +1,410 @@
+body{
+    margin: 0px;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+/* Body Header*/
+
+#body-header{
+    height: 65vh;
+    opacity: 0.8;
+    background-image: url("../../bacllit.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 1.2rem;
+}
+.li{
+    list-style: none;
+    padding-left: 0px;
+    margin:0px;
+}
+.li li{
+    display: inline-block;
+    margin: 0px 8px 8px 0px;
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+.li li a{ 
+    text-decoration: none;
+    color: white;
+}
+
+.nav-menu li a{
+    transition: color 0.5s, border-bottom 4s, font-size 0.1s;
+}
+
+.nav-menu li a:hover{
+    color: lightblue;
+    font-size: 1.1rem;
+    border-bottom: 1px solid lightblue;
+}
+
+#name-social-continer{
+    margin-top: 20vh;
+}
+
+#my-name{
+    font-size:3em;
+    color:white;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    transition: font-size 0.2s, color 0.5s;
+
+    
+}
+#my-name:hover{
+    color: pink;
+    font-size: 3.2em;
+}
+
+.text-center{
+    text-align: center;
+
+}
+
+.social-icons li a i{
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    border-radius: 50%;
+    transition: border 1s, bax-shadow 0.5s, font-size 0.1s;
+}
+.social-icons li a i:hover{
+    box-shadow: 0px 0px 6px 4px darkgray;
+    font-size: 1.2rem;
+    color:pink;
+}
+
+
+
+
+/*section   */
+section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+}
+section:nth-child(2n){
+    background-color: rgb(241, 241, 241);
+}
+section:nth-child(2n+1){
+    background-color: white;
+}
+
+.section-heading{
+    width: auto;
+    padding: 20px 10px 10px;
+    font-weight: 400;
+}
+.section-heading span{
+    font-size:40px;
+    color: #2857a4;
+    display: inline-block;
+    padding: 10px;
+    margin-right: 0.5rem;
+}
+.mb75px{
+    margin-bottom: 75px;
+}
+
+
+
+
+
+
+/*aboout section */
+#about{
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+#my-pic{
+    height: 13rem;
+    width: 13rem;
+    margin: auto;
+    margin-top: -17vh;
+}
+#my-pic img{
+    width:100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 7px 7px white;
+    transition: height 0.2s, width 0.2s, box-shadow 0.5s; 
+}
+#my-pic img:hover{
+    width: 14rem;
+    height: 14rem;
+    box-shadow: 0px 0px 7px 7px lightpink;
+}
+.my-info{
+    color: grey;
+    text-align: justify;
+    padding: 5% 10% 5%;
+    font-size: 0.9rem;
+    transition: font-size 0.3s,color 0.2s;
+}
+.my-info b{
+    color:darkgray;
+    font-style: italic;            
+}
+.my-info:hover{
+    color:brown;
+}
+
+
+
+
+
+
+
+/*skills section*/
+.skills-display{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.skill-progress{
+    width: 10rem;
+    height: 2rem;
+    background-color: grey;
+    border-radius: 0.9rem;
+    margin: 15px;
+
+}
+.skill-progress>div{
+    border-radius:0.9rem 0px 0px 0.9rem;
+}
+.c{
+    width: 10%;
+    height: inherit;
+    background-color: blue;
+    transition: width 1s ease-in-out,border-radius 0.2s;
+}
+.skills-display:hover .c{
+    width:40%;
+}
+.py{
+    width: 10%;
+    height: inherit;
+    background-color: orange;
+    transition: width 1s;
+}
+.skills-display:hover .py{
+    width:80%;
+}
+.java{
+    width: 10%;
+    height: inherit;
+    background-color: red;
+    transition: width 1s;
+}
+.skills-display:hover .java{
+    width:10%;
+}
+.htm{
+    width: 10%;
+    height: inherit;
+    background-color: purple;
+    transition: width 1s;
+}
+.skills-display:hover .htm{
+    width:90%;
+}
+.data{
+    width: 10%;
+    height: inherit;
+    background-color: indianred;
+    transition: width 1s;
+}
+.skills-display:hover .data{
+    width:30%;
+}
+.algo{
+    width: 10%;
+    height: inherit;
+    background-color: indigo;
+    transition: width 1s;
+}
+.skills-display:hover .algo{
+    width:30%;
+}
+.skill-name span{
+    color: white;
+    font-size: 1rem;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+
+
+/* Experience */
+.timeline{
+    position: relative;
+    width: 75%;
+    border: 2px solid black;
+}
+.timeline-box{
+    position: relative;
+    margin: 5px;
+    width: 40%;
+    left: 5%;
+    min-height: 150px;
+    border: 2px solid black;
+    font-size: 0.8rem;
+}
+
+.timeline-box:nth-child(2n){
+    left: 53%;
+}
+.timeline-box:nth-child(2n)::after{
+    content: "";
+    position: absolute;
+    top: 30%;
+    left:-12.55%;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius:50%;
+    background-color: grey;
+    z-index: 1;
+}
+.timeline-box:nth-child(2n+1)::after{
+    content: "";
+    position: absolute;
+    top: 37%;
+    right:-12.55%;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius:50%;
+    background-color: grey;
+    z-index: 1;
+}
+.timeline-divider{
+    position:absolute;
+    height: 75%;
+    width: 0;
+    border-right: 3px dashed #0096fa6b;
+    top:10%;
+    left:50%
+}
+
+@media screen and (max-width:600px){
+    .timeline-divider{
+        left: 5%;
+    }
+    .timeline-box{
+        left: 12% !important;  /* giving priority*/
+        width: 80%;
+    }
+    .timeline-box::after{
+        left: -12% !important;
+    }
+    html{
+        font-size: 20px;
+    }
+    /* .timeline-box:nth-child(2n+1)::after{
+        left: -12%;
+    }
+    .timeline-box:nth-child(2n)::after{
+        left: -12%;
+    } */
+    /* .timeline-box:nth-child(2n){
+    left: 12%;
+    } */
+}
+.timeline-traveller{
+    position: sticky;
+    top: 30%;
+    transform: rotate(90deg);
+    color:rgb(31, 31, 214);
+    z-index: 2;
+}
+.timeline-box table{
+    width: 100%;
+    color: grey;
+}
+.timeline-box table td{
+    border:1px solid black;
+    margin: 50%;
+}
+
+/* Portfolio   */
+.portfo{
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.portfo .img-f img{
+    height: 300px;
+    width: 300px;
+}
+
+/*Contact   */
+section[id="contact"]{
+    background:linear-gradient(20deg,blue,rgb(54, 0, 54) 75%);
+    color:white;
+    font-size: 1rem;
+}
+#pp{
+    width: 75%;
+    position: relative;
+    display: flex;
+}
+#formm{
+    padding-top:22px;
+    width: 50%;
+}
+#get-in-touch{
+    width: 50%;
+    padding-left: 25%;
+}
+#formm input,textarea{
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 100%;
+    border:none;
+    border-bottom: 1px solid white;
+    background:transparent;
+    color:white;
+}
+#formm button{
+    border:none;
+    background:transparent;
+    border: 2px solid white;
+    font-weight: bold;
+    color:white;
+    padding: 10px;
+}
+
+@media screen and (max-width:600px){
+    #pp{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #fromm{
+        margin: auto;
+        width: 100%;
+        padding: 0px;
+        margin:auto;
+    }
+    #get-in-touch{
+        margin: auto;
+        width: 100%;
+        padding: 0px;
+        margin: auto;
+    }
+}

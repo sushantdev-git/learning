@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #div1{
+                height: 100px;
+                width: 100px;
+                min-width: 150px;
+                max-width: 250px;
+                background-color: cyan;
+                border: 2px solid blue;
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <!--
+        In box model everything in considred as box:
+            (box-sizing: "border-box")
+            There is two type of box model:
+                Content box model
+                    In content box model the size of element on render become content+paddin+border
+                Border box model
+                    In border box model the size of element on render will remian same and size of content become  content-padding-border
+                
+                margin is not considered anywhere to be added or subtracted
+
+
+        min-width is used when we want our div width to be fixed over some time
+        max-width is for same also
+
+        when content get outside of div , then this condition is known as overflow
+        overflow:hidden, scroll, auto
+    -->
+    <body>
+        <div id="div1">
+            <p>
+                This is a sample paragraph
+            </p>
+            <p>
+                This is a sample paragraph
+            </p>
+            <p>
+                This is a sample paragraph
+            </p>
+            <p>
+                This is a sample paragraph
+            </p>
+        </div>
+    </body>
+</html>

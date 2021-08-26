@@ -1,0 +1,54 @@
+li p{
+    color:dimgray;
+    font-size: 20px;
+}
+/* you can group selector like this*/
+h1,p{
+    font-family: sans-serif;
+}
+
+/* Nesting selector
+li h4{
+    text-transform:uppercase;
+    font-family: cursive;
+} */
+
+.uppercase{
+    text-transform: uppercase;
+}
+main{
+    width: 70%;
+    display: inline-block;
+
+}
+
+aside{
+    display: inline-block;
+    width: 21%;
+    vertical-align: top;
+    margin-left: 4%;
+}
+
+#site-desc p{
+    color: red;
+}
+#blog-desc{
+    color: #314831
+}
+.widget{
+    border-top:4px solid black;
+}
+.widget input{
+    display: block;
+    background-color: #f7f7f7;
+    margin-bottom: 15px;
+    padding: 4px;
+    color: black;
+    font-size: 1.2rem;
+}
+button[type="submit"]{
+    font-size: 1.2rem;
+    background-color: black;
+    color: white;
+    word-spacing: 10px;
+}

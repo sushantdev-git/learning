@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle View</title>
+    <style>
+        body{
+            text-align:center;
+            transition: all 0.5s;
+        }
+        #td{
+            border:1px solid black;
+            height:20px;
+            width:100px;
+            margin:10% auto;
+            border-radius:20px;
+            background-color:white;
+            position:relative;
+            padding: 2px;
+            transition: all 0.5s ease-in;
+        }
+        #circle{
+            height:20px;
+            width:20px;
+            box-sizing:border-box;
+            border-radius:50%;
+            transition:all 0.5s;
+            background-color:black;
+            position: absolute;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="td">
+        <div id="circle">
+            
+        </div>
+    </div>
+    <h1>
+        Toggle Using JQuery
+    </h1>
+    <script src="j query file/jquery-3.5.1.js"></script>
+    <script>
+        var Toggle = false;
+        $("#circle").click(function(event){
+            var element = $(this);
+            if(!(Toggle)){
+                $('body').css({
+                    color:"white",
+                    backgroundColor:"black",
+                });
+                element.css({
+                    marginLeft:"79px",
+                    backgroundColor:"white"
+                });
+                $('#td').css({
+                    backgroundColor:"black",
+                    border:"1px solid white"
+                })
+                Toggle = true;
+            } else {
+                $('body').css({
+                    color:"black",
+                    backgroundColor:"white",
+                });
+                element.css({
+                    marginLeft:"0px",
+                    backgroundColor:"black"
+                });
+                $('#td').css({
+                    backgroundColor:"white",
+                    border:"1px solid black"
+                })
+                Toggle = false;
+            }
+        })
+    </script>
+</body>
+</html>

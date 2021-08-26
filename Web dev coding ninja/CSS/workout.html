@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #xy{
+                height: 0px;
+                width: 0px;
+                overflow: hidden;
+                transition: all 1s;
+            }
+            :target{
+                height: 100px;
+                width: 100%;
+                background-color: pink;
+                border: 2px solid violet;
+                padding: 100px;
+                overflow:scroll;
+            }
+            #pp{
+                height: 150px;
+    width: 300px;
+    background-image: repeating-linear-gradient(45deg, #9e6df9, #f77656 25%, #5ffc87 50%);
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#xy">Click here</a><br>
+        <div id="xy">Clickng the above link is targetting me</div>
+        <div id="pp"></div>
+
+    </body>
+</html>

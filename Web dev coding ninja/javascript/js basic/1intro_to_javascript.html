@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var global=10; // this is a global variable
+        a="hello";
+        a=false;
+        function fxn(a){
+            console.log(a)
+            alert("hello there!!")
+        }
+    </script>
+</head>
+<!--
+    >Developed By Brandon Eich 1995
+    >To Add Interactivity to Netscape
+    >First Draft was developed only in 10 days!
+    >Mocha > Livescript > Javascript    // javascript is not related to java
+    >After javascript, Microsoft also came up with Jscript
+    >This cause pain for developers to design pages that work well on IE and Netspace
+    >Standardised by ECMA international in 1997 and ECMAScripts or ES
+    >After then there are diffenrent version of ES come
+    > Latest in ES 2018
+    >we will be learning es5 and some es6
+
+    javascript is a loosely typed language
+    one variable can have vlaue of multiple type
+
+    There are 6 Primitive  and 1 object
+    Prmitive:
+        >Number #64 bit
+        >String
+        >boolean
+        >null        # if you don't have value to variable then you can set it as null;
+        >undefined   #If you create a variable and not provide any value to it then it is of undefined type;
+        >symbol
+
+    In javascript 1/0 = infinity # hence infinity is a type of value in js.
+    Math.pow(10,1000)=Infinity because it is greater than max value stored in js
+    Number.MAX_VALUE give max number val can be stored in js
+
+    pasreInt('100')=100
+    parseInt('aaaa')=NaN #Not a valid no
+
+    typeof 10 = 'number'   #typeof is used to check type of var
+    typeof null = 'object'  # this is a bug
+    typeof infinity = 'number' 
+    typeof NaN = 'number'
+
+
+
+-->
+<body>
+    <button type="button" onclick="fxn()">Click me</button>
+</body>
+</html>

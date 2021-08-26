@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html{
+                font-family: sans-serif;
+                font-size: 1.5rem;
+            }
+            p:active{
+                background-color: blueviolet;
+            }
+            a:active{
+                color:red;
+            }
+
+            a:visited{
+                color:green
+            }
+            #section{
+                height:0px;
+                width: 0px;
+                background-color: lightgrey;
+                transition: all 2s ease-in-out;
+                top:0;
+                left: 0;
+                position: fixed;
+                overflow: hidden;
+            }
+            #section:target{
+                height: 100px;
+                width: 400px;
+                background-color: lightblue;
+                margin-top:25%;
+                margin-left:25%;
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <p>Click <a href="https://www.google.com" target="_blank">Google</a> to search</p>
+        </div>
+        <a href="#section">click here</a>
+        <div id="section">Some Content
+        </div>
+    </body>
+</html>
+<!-- <html>
+    <head>
+        <style>
+            #xy{
+                height: 0px;
+                width: 0px;
+                overflow: hidden;
+                transition: all 1s;
+            }
+            :target{
+                height: 100px;
+                width: 100%;
+                background-color: pink;
+                border: 2px solid violet;
+                padding: 100px;
+                overflow:scroll;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#xy">Click here</a><br>
+        <div id="xy">Clickng the above link is targetting me</div>
+
+    </body>
+</html> -->
